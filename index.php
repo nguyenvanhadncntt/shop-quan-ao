@@ -18,12 +18,16 @@ function counting_ip(){
 }
 counting_ip();
 
-if(isset($_GET['controller'])) $controller = $_GET['controller'];
+if(!empty($_GET['controller'])) $controller = $_GET['controller'];
 else $controller = 'home';
 
-if(isset($_GET['action'])) $action = $_GET['action'];
+if(!empty($_GET['action'])) $action = $_GET['action'];
 else $action = 'index';
+
 $file = 'website/controllers/'.$controller.'/'.$action.'.php';
+
+echo $file;
+
 if (file_exists($file)) {
     require($file);
 } else {

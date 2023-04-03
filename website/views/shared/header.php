@@ -3,7 +3,7 @@ $options_parent_menu = array(
     'order_by' => 'Id'
 );
 $parent_menus = get_all('categories',$options_parent_menu);
-
+header('Content-type: text/html; charset=utf-8');
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
